@@ -15,36 +15,33 @@ th,td{text-align:left;vertical-align:top;padding:8px;border-bottom:1px solid var
 td em,li em,p em{color:inherit}
 </style></head><body><main>
 <h1>FlexPrompter – Privacy Policy</h1>
-<p><em>Last updated: 2026-11-16 (phone cameras only)</em></p>
+<p><em>Last updated: 2026-11-17 (version 1.0)</em></p>
 <p>FlexPrompter is a teleprompter and video recorder for Android, published by Alp Lab AB. This policy explains what happens to your scripts, your voice and your videos.</p>
 <h2>Summary</h2>
 <ul>
-<li><strong>FlexPrompter goes online only when you use an AI feature.</strong> Then the text you chose (a script, a selection, subtitles, or what you said in a take for feedback) is sent to the FlexPrompter AI server, which passes it through OpenRouter to an AI model (currently DeepSeek V4.1 Flash) and returns the result. Our server does not log or store it. Requests are sent only to model providers that, according to OpenRouter, do not keep the data or use it for training; OpenRouter itself processes the request under its own terms. Before the first AI use, the app asks you.</li>
-<li>Simple AI edits may run entirely on your phone (Gemini Nano, Android AICore) instead.</li>
-<li>To stop abuse, an AI request carries a Google Play Integrity token and, for Pro users, the Play purchase token, which our server checks with Google. Daily limits are counted with a one-way hash of an app install ID; it is not linked to you.</li>
-<li>Your videos, audio recordings and scripts are never uploaded to us. We do not collect your data.</li>
-<li><strong>Assistant (optional, Pro)</strong>: what you type, your creator profile (niche, audience, tone, platforms) and basic app context (filming mode, frame ratio) go through our server and OpenRouter to the AI model. When the assistant reads or changes a script, that script's text is sent too. Changes happen only after you tap to confirm. Our server keeps the conversation (with a one-way hash of your install ID) only while the chat is in use, and deletes all of it automatically 2 hours after the last message. It is not logged and not used for anything else. Your profile and chat history stay on your phone.</li>
-<li><strong>Script sync (optional)</strong> stores your scripts in a hidden FlexPrompter folder in <strong>your own Google Drive</strong>, through Google's drive.appdata permission. FlexPrompter has no server copy and cannot see your other Drive files. Delete the data in Drive → Settings → Manage apps → FlexPrompter → Delete hidden app data.</li>
+<li><strong>Alp Lab does not receive your data.</strong> FlexPrompter has no account, no analytics, no ads and no crash reporting. Your scripts, takes and recordings stay on your phone unless you send them somewhere yourself.</li>
+<li><strong>Script sync (optional)</strong> copies your scripts to a hidden FlexPrompter folder in <strong>your own Google Drive</strong>, through Google's drive.appdata permission, so you can use them on another phone. The scripts go from your phone straight to Google, encrypted in transit; Alp Lab has no copy and cannot see them or your other Drive files. Because the scripts leave your phone, Google Play's Data safety section lists this as "Files and docs" collected for app functionality, optional. Turn sync off in Settings, and delete the copy in Drive → Settings → Manage apps → FlexPrompter → Delete hidden app data.</li>
 <li><strong>Live streaming (optional)</strong> sends your camera picture and sound to the platform you choose (YouTube, Twitch, Facebook or your own server) with your stream key. The key is stored encrypted on your phone only.</li>
+<li><strong>AI writing help (optional)</strong> runs entirely <strong>on your phone</strong> (Gemini Nano through Android AICore, on supported phones). The text you choose is not sent anywhere.</li>
+<li>Voice follow hands microphone audio to <strong>your phone's on-device speech recognizer</strong>, a part of Android, while voice follow is listening. The recognised words only move the script and are not stored.</li>
 <li>The framing guard looks for a face in the camera preview <strong>on your phone</strong> (Google ML Kit through Google Play services). No pictures leave the phone.</li>
-<li>Voice follow hands microphone audio to <strong>your phone's on-device speech recognizer</strong>, a part of Android, while voice follow is listening.</li>
 <li>Purchases are processed by Google Play. FlexPrompter only stores a "Pro active" flag on your phone.</li>
-<li>No analytics, no ads, no crash reporting, no accounts.</li>
 </ul>
+<p><em>Cloud AI (larger AI models through an Alp Lab server) is not part of this version. If it is added later, this policy will describe it first, and the app will ask before anything is sent.</em></p>
 <h2>Permissions</h2>
 <div class="t"><table><thead><tr><th>Permission</th><th>Used for</th></tr></thead><tbody>
 <tr><td>Camera</td><td>The preview and the video of your takes. Only while the prompter screen is open.</td></tr>
 <tr><td>Microphone</td><td>The sound of your takes, and voice follow. The microphone runs only during the countdown, while recording, and while voice follow is listening. Audio is never stored apart from the takes you record. With Pro you can pick an external USB, wired or Bluetooth microphone.</td></tr>
 <tr><td>Nearby devices (Bluetooth)</td><td>Only when you use it: to let another phone with FlexPrompter work as a remote. The remote must type a code shown on your screen. FlexPrompter does not use Bluetooth to find your location.</td></tr>
 <tr><td>Display over other apps</td><td>Only when you start the floating prompter: the script window stays on top of other apps (for example video calls). It shows text only and reads nothing from the apps underneath.</td></tr>
-<tr><td>Notifications, foreground service</td><td>The floating prompter shows a notification with Pause and Stop while it is on screen.</td></tr>
-<tr><td>Internet, network state</td><td>Only for features you start: AI, live streaming and script sync, as described above.</td></tr>
+<tr><td>Notifications, foreground service</td><td>The floating prompter shows a notification with Pause/Play and Stop while it is on screen. With voice follow on, it uses the microphone while it listens, as described above.</td></tr>
+<tr><td>Internet, network state</td><td>Only for features you start: live streaming and script sync, as described above.</td></tr>
 </tbody></table></div>
 <h2>Android system services</h2>
 <div class="t"><table><thead><tr><th>Feature</th><th>System service</th><th>What it receives</th></tr></thead><tbody>
 <tr><td>Voice follow (Pro)</td><td>The phone's on-device speech recognizer</td><td>Microphone audio while voice follow is listening, to recognise the words you say. The text it returns is used only to move the script and is not stored.</td></tr>
-<tr><td>AI on the phone (optional)</td><td>Android AICore (Gemini Nano)</td><td>The text you chose, on your phone only. Android downloads the model the first time.</td></tr>
-<tr><td>AI on the server (optional)</td><td>FlexPrompter AI server → OpenRouter → AI model provider</td><td>The text you chose, a Play Integrity token, the Pro purchase token, a hashed install ID. Nothing is stored by our server.</td></tr>
+<tr><td>AI writing help (optional)</td><td>Android AICore (Gemini Nano)</td><td>The text you chose, on your phone only. Android downloads the model the first time.</td></tr>
+<tr><td>Script sync (optional)</td><td>Google Drive (your account, hidden app folder)</td><td>Your scripts, under Google's terms and privacy policy. Signing in uses your Google account through Android.</td></tr>
 <tr><td>Pro purchase or subscription</td><td>Google Play Store app</td><td>Purchase details, handled by Google Play under Google's terms and privacy policy</td></tr>
 </tbody></table></div>
 <p>Offline speech language packs are downloaded and updated by Android, not by FlexPrompter.</p>
@@ -55,9 +52,9 @@ td em,li em,p em{color:inherit}
 <tr><td>Your setups (presets)</td><td>App-private storage</td><td>Delete setups in Settings</td></tr>
 </tbody></table></div>
 <h2>Sharing</h2>
-<p>FlexPrompter shares nothing by itself. When you tap <em>Share</em> on a take, Android's share sheet sends it to the app you pick.</p>
+<p>Alp Lab does not sell or share your data, and FlexPrompter shares nothing by itself. Data goes to another company only through a feature you turn on: Google Drive for script sync, and the platform you pick for live streaming. When you tap <em>Share</em> on a take, Android's share sheet sends it to the app you pick.</p>
 <h2>Children</h2>
-<p>FlexPrompter is not directed at children under 13 and collects no personal data from anyone.</p>
+<p>FlexPrompter is not directed at children under 13. Alp Lab does not receive personal data from anyone.</p>
 <h2>Changes</h2>
 <p>If this policy changes, the new version is published at this address with a new date.</p>
 <h2>Contact</h2>
